@@ -9,10 +9,14 @@ subtitle: Introduction
 Text alternatives for images of text makes information conveyed by non-text content accessible through the use of a text alternative. Text alternatives are a primary way for making information accessible because they can be rendered through any sensory modality (for example, visual, auditory or tactile) to match the needs of the user. Providing text alternatives allows the information to be rendered in a variety of ways by a variety of user agents. For example, a person who cannot see a picture can have the text alternative read aloud using synthesized speech. A person who cannot hear an audio file can have the text alternative displayed so that he or she can read it. In the future, text alternatives will also allow information to be more easily translated into sign language or into a simpler form of the same language.
 
 <dl class="method-card">
-  <dt>Platform:</dt>
-  <dd>Any platform supporting HTML</dd>
-  <dt>Technology:</dt>
-  <dd>HTML</dd>
+  <div>
+    <dt>Platform:</dt>
+    <dd>Any platform supporting HTML</dd>
+  </div>
+  <div>
+    <dt>Technology:</dt>
+    <dd>HTML</dd>
+  </div>
 </dl>
 
 ## How it solves user need

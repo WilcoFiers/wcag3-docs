@@ -10,5 +10,5 @@ title: Methods
 
 <div class="card">
   <h2>Other method</h2>
-  <p>...</p>
+  <p>Short description</p>
 </div>

@@ -48,3 +48,34 @@ main li {
 main p {
   line-height: 1.5em;
 }
+
+.card {
+  background: #CCC;
+  padding: 1em;
+  margin: 2em;
+}
+
+.card a {
+  float: right;
+  margin: -3em 2em 0 0;
+  text-decoration: none;
+  background: #111;
+  color: #EEE;
+  padding: .5em 2em;
+}
+
+.method-card {
+  background: #ccc;
+  width: 30em;
+  margin: 2em auto;
+  padding: 1.5em 5em;
+}
+.method-card dt, .method-card dd {
+  display: inline-block;
+  margin: 0;
+}
+
+.method-card dt {
+  font-size: 1.5em;
+  padding: .5em;
+}
