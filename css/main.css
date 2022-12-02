@@ -37,3 +37,14 @@ body {
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
 }
+
+a {
+  color: #036;
+}
+
+main li {
+  margin-bottom: .5em;
+}
+main p {
+  line-height: 1.5em;
+}

@@ -4,4 +4,4 @@ title: Activities
 subtitle: Edit
 ---
 
-Text here...
+Yet to be written.
