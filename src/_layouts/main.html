@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+  {% include top-header.html %}
+  {% include sub-header.html %}
+  <main>
+    {% if page.subtitle %}
+    <h2>{{ page.subtitle }}</h2>
+    {% endif %}
+    {{ content }}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

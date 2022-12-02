@@ -1,0 +1,31 @@
+.top-header {
+  background: #444;
+  color: #eee
+}
+
+.top-header header.page-width {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5em 0;
+}
+
+.top-header .branding {
+  display: flex;
+  flex-direction: row;
+}
+.top-header .w3c {
+  font-size: 4em;
+}
+.top-header .wai {
+  font-size: 1em;
+  padding: .8em .8em;
+  line-height: 1.5em;
+}
+.top-header .wcag3 {
+  margin: .4em 0 .2em;
+  font-size: 1.2em;
+}
+.top-header .title {
+  font-size: 1.8em;
+}

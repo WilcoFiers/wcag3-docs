@@ -1,0 +1,44 @@
+<div class="sub-header">
+  <div class="page-width">
+
+    <ul class="breadcrumb">
+      <li><a href="https://w3c.github.io/silver/guidelines/">WCAG 3.0</a></li>
+      <li><a href="/">Text Alternatives Methods & How To's</a></li>
+      {% if page.type == "method" %}
+      <li><a href="/methods/">Methods</a></li>
+      <li>{{ page.title }}</li>
+      {% elsif page.type == "activity" %}
+      <li><a href="/activities/">Activities</a></li>
+      <li>{{ page.subtitle }}</li>
+      {% else %}
+      <li>{{ page.title }}</li>
+      {% endif %}
+    </ul>
+    
+    <h1 class="subtitle">
+      {{ page.title }}
+    </h1>
+    
+    {% if page.type == "method" %}
+    <nav aria-label="Methods navigation" class="nav-list">
+      <ul>
+        <li>{% include link.html href="/methods/introduction/" text="Introduction" %}</li>
+        <li>{% include link.html href="/methods/code-snippets/" text="Code Snippets" %}</li>
+        <li>{% include link.html href="/methods/test/" text="Test" %}</li>
+        <li>{% include link.html href="/methods/background/" text="Background" %}</li>
+        <li>{% include link.html href="/methods/definitions/" text="Technical Definitions" %}</li>
+      </ul>
+    </nav>
+    {% elsif page.type == "activity" %}
+    <nav aria-label="Methods navigation" class="nav-list">
+      <ul>
+        <li>{% include link.html href="/activities/plan/" text="Plan" %}</li>
+        <li>{% include link.html href="/activities/design/" text="Design" %}</li>
+        <li>{% include link.html href="/activities/develop/" text="Develop" %}</li>
+        <li>{% include link.html href="/activities/edit/" text="Edit" %}</li>
+        <li>{% include link.html href="/activities/test/" text="Test" %}</li>
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</div>
