@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.page-width, main, footer {
+.page-width, main {
   max-width: 60em;
   margin: 0 auto;
 }
@@ -78,4 +78,10 @@ main p {
 .method-card dt {
   font-size: 1.5em;
   padding: .5em;
+}
+
+footer {
+  margin-top: 4em;
+  min-height: 10em;
+  background: #333;
 }
