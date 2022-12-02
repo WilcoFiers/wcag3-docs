@@ -7,7 +7,7 @@ subtitle: Test
 <div class="card">
   <h2>Images of text</h2>
   <p>Short description</p>
-  <a href="/methods/test/">See More</a>
+  <a href="/wcag3-docs-wireframes/methods/test">See More</a>
 </div>
 
 <div class="card">
