@@ -2,26 +2,27 @@
   <header class="page-width">
     <div>
       <div class="wcag3">WCAG 3.0</div>
-      <div class="title">Text Alternatives Methods & How To's</div>
+      {%- if outcome.title %}
+      <div class="title">{{ outcome.title}} Methods & How To's</div>
+      {%- endif %}
     </div>
 
     <div class="branding">
-      <div class="w3c">W3C</div>
-      <div class="wai">
-        Web Accessibility <hr role="none">
-        Initiative WAI
-      </div>
+      {% include 'wai-logo.html' %}
     </div>
   </header>
 
-  <nav class="page-width nav-list" aria-label="WCAG 3 How-to Navigation">
+  {% if outcome.slug %}
+  <nav aria-label="WCAG 3 How-to Navigation"><div class="page-width nav-list">
+    {% assign base = '/outcomes/' | append: outcome.slug %}
     <ul>
-      <li>{% include link.html href="/wcag3-docs-wireframes/" text="Get Started" %}</li>
-      <li>{% include link.html href="/wcag3-docs-wireframes/user-needs" text="User Needs" %}</li>
-      <li>{% include link.html href="/wcag3-docs-wireframes/activities/plan" text="Activities" %}</li>
-      <li>{% include link.html href="/wcag3-docs-wireframes/examples" text="Examples" %}</li>
-      <li>{% include link.html href="/wcag3-docs-wireframes/resources" text="Resources" %}</li>
-      <li>{% include link.html href="/wcag3-docs-wireframes/methods" text="Methods" %}</li>
+      <li>{% include 'link.html', href: '/', base: base, text: 'Get Started' %}</li>
+      <li>{% include 'link.html', href: '/user-needs', base: base, text: 'User Needs' %}</li>
+      <li>{% include 'link.html', href: '/activities/plan', base: base, text: 'Activities' %}</li>
+      <li>{% include 'link.html', href: '/examples', base: base, text: 'Examples' %}</li>
+      <li>{% include 'link.html', href: '/resources', base: base, text: 'Resources' %}</li>
+      <li>{% include 'link.html', href: '/methods', base: base, text: 'Methods' %}</li>
     </ul>
-  </nav>
+  </div></nav>
+  {% endif %}
 </div>

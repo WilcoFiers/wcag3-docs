@@ -1,0 +1,10 @@
+# WCAG 3 Outcomes
+
+{% for outcome in outcomes %}
+  {%- assign href = '/outcomes/' | append: outcome.slug | append: '/' %}
+  {%- include 'card.html',
+    title: outcome.title,
+    content: outcome.description,
+    href: href
+  %}
+{% endfor %}

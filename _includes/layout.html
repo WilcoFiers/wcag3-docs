@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }}</title>
+  <title>{{ title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <!-- Cheat in GitHub -->
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/wcag3-docs-wireframes/assets/main.css">
 </head>
 <body>
-  {% include top-header.html %}
-  {% include sub-header.html %}
+  {%- include "top-header.html" %}
+  {%- if outcome.slug %}
+  {%-   include "sub-header.html" %}
+  {%- endif %}
   <main>
-    {% if page.subtitle %}
-    <h2>{{ page.subtitle }}</h2>
+    {% if subtitle %}
+    <h2>{{ subtitle }}</h2>
     {% endif %}
     {{ content }}
   </main>
   <footer>
-
+    <div class="page-width">
+      <h2><a href="https://w3.org/WAI/">
+        W3C Web Accessibility Initiative (WAI)
+      </a></h2>
+    </div>
   </footer>
 </body>
 </html>

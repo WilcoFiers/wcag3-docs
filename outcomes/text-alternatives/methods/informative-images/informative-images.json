@@ -1,0 +1,8 @@
+{
+  "method": {
+    "index": 0,
+    "title": "Informative images",
+    "slug": "informative-images",
+    "description": "Images that are not decorative must have an alt attribute."
+  }
+}

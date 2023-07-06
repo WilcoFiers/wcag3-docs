@@ -1,5 +1,5 @@
 .top-header {
-  background: #444;
+  background: var(--w3c-classic);
   color: #eee
 }
 
@@ -11,21 +11,18 @@
 }
 
 .top-header .branding {
+  margin-top: 1em;
   display: flex;
   flex-direction: row;
 }
-.top-header .w3c {
-  font-size: 4em;
-}
-.top-header .wai {
-  font-size: 1em;
-  padding: .8em .8em;
-  line-height: 1.5em;
-}
 .top-header .wcag3 {
-  margin: .4em 0 .2em;
+  margin: 0 0 .2em;
   font-size: 1.2em;
 }
 .top-header .title {
   font-size: 1.8em;
+}
+
+.top-header nav {
+  background-color: var(--w3c-blue);
 }

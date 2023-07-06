@@ -1,6 +1,6 @@
 {% capture current %}{{ page.url | replace: ".html", "" }}{% endcapture %}
-{% if include.href == current %}
-  <a class="current" href="{{ include.href }}">{{ include.text }}</a>
+{% if href == current %}
+  <a class="current" href="{{ href | prepend: base }}">{{ text }}</a>
 {% else %}
-  <a href="{{ include.href }}">{{ include.text }}</a>
+  <a href="{{ href | prepend: base }}">{{ text }}</a>
 {% endif %}
