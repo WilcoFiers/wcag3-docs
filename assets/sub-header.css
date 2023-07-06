@@ -14,12 +14,13 @@
   display: inline-block;
 }
 
-.sub-header .breadcrumb li:not(:first-child):before {
+.sub-header .breadcrumb li:not(:last-child):after {
   content: " / "
 }
 
 .sub-header .subtitle {
-  font-size: 2.5em;
+  font-size: 2.5rem;
+  font-size: min(2.5rem, 10vh);
   text-align: center;
   margin: 1.3em 0 .5em;
 }
