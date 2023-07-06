@@ -1,6 +1,7 @@
 .sub-header {
-  background: #DDD;
-  padding: 1.3em 0;
+  background: var(--off-white);
+  padding-top: 1.3em;
+  border-bottom: solid 1px var(--line-grey);
 }
 
 .sub-header .breadcrumb {

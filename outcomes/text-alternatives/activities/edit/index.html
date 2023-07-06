@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Activity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <!-- Cheat in GitHub -->
+  <link rel="stylesheet" href="/wcag3-docs-wireframes/assets/main.css">
+</head>
+<body><div class="top-header">
+  <header class="page-width">
+    <div>
+      <div class="wcag3">WCAG 3.0</div>
+      <div class="title">Text alternatives Methods & How To's</div>
+    </div>
+
+    <div class="branding">
+      <a href="/wcag3-docs-wireframes/WAI/">
+  <img alt="W3C" src="/wcag3-docs-wireframes/assets/images/w3c.svg" width="92" height="44">
+  <img alt="Web Accessibility Initiative" src="/wcag3-docs-wireframes/assets/images/wai.svg">
+</a>
+
+    </div>
+  </header>
+
+  
+  <nav aria-label="WCAG 3 How-to Navigation"><div class="page-width nav-list">
+    
+    <ul>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/">Get Started</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/user-needs">User Needs</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/plan">Activities</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/examples">Examples</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/resources">Resources</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods">Methods</a>
+</li>
+    </ul>
+  </div></nav>
+  
+</div>
+<div class="sub-header">
+  <div class="page-width">
+    <ul class="breadcrumb">
+      <li><a href="https://w3c.github.io/silver/guidelines">WCAG 3.0</a></li>
+        <li><a href="/wcag3-docs-wireframes/outcomes/text-alternatives/">Text alternatives Methods & How To's</a></li>
+          <li><a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/plan">Activities</a></li>
+          <li>Edit</li>
+    </ul>
+    
+    <h1 class="subtitle">
+      
+        Activity
+      
+    </h1>
+    <nav aria-label="Activity navigation" class="nav-list">
+      <ul>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/plan/">Plan</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/design/">Design</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/develop/">Develop</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/edit/">Edit</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/test/">Test</a>
+</li>
+      </ul>
+    </nav>
+    
+  </div>
+</div>
+
+  <main>
+    
+    <h2>Edit</h2>
+    
+    <ul>
+<li>
+<p><strong>Choosing appropriate text alternatives:</strong><br>
+Imagine that you’re reading the web page aloud over the phone to someone who needs to understand the page. This should help you decide what (if any) information or function the images have. If they appear to have no informative value and aren’t links or buttons, it’s probably safe to treat them as <a href="https://www.w3.org/WAI/tutorials/images/decorative/">decorative</a>.</p>
+</li>
+<li>
+<p><strong>Prioritize information in text alternative:</strong><br>
+Aim to put the most important information at the beginning.</p>
+</li>
+<li>
+<p><strong>Length of the text alternative:</strong><br>
+The <code>alt</code> text should be the most concise description possible of the image’s purpose. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed in <a href="https://www.w3.org/WAI/tutorials/images/complex/">complex images</a>.</p>
+</li>
+<li>
+<p><strong>Responsive design:</strong><br>
+Icons with text labels will often drop the text labels when viewed on smaller screens. Ensure that icons are readable at that size, understandable without text, and have text descriptions.</p>
+</li>
+<li>
+<p><strong>Punctuation within <code>alt</code> attributes:</strong></p>
+<ul>
+<li>
+<p>As for any text, using punctuation in the text alternative makes the information easier to understand. In particular, remember to add space characters in the <code>alt</code> text when there’s no space character between the image and adjacent text, to avoid having words running together when they are read by a screen reader.</p>
+</li>
+<li>
+<p>If you use a null (empty) text alternative (<code>alt=&quot;&quot;</code>) to hide decorative images, make sure that there is no space character in between the quotes. If a space character is present, the image may not be effectively hidden from assistive technologies. For instance, some screen readers will still announce the presence of an image if a space character is put between the quotes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Superfluous information in the text alternative:</strong><br>
+Usually, there’s no need to include words like “image”, “icon”, or “picture” in the alt text. People who can see will know this already, and screen readers announce the presence of an image. In some situations, it may be important to distinguish between paintings, photographs, or illustrations, etc., but it’s best to avoid the more generic use of the terms.</p>
+</li>
+<li>
+<p><strong>SVG graphics:</strong></p>
+<ul>
+<li>
+<p>SVG graphics can be referenced in the <code>src</code> attribute of an <code>&lt;img&gt;</code> element like other image formats (PNG, JPEG, GIF). In this case, the examples of this tutorial can be used with SVG as well.</p>
+</li>
+<li>
+<p>As SVG images consist of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide a text alternative in a <code>&lt;title&gt;</code> element within the SVG image. To improve accessibility support, that title should be referenced from an <code>aria-labelledby</code> attribute of the <code>&lt;svg&gt;</code> element, for example:</p>
+</li>
+</ul>
+<p><code>&lt;svg aria-labelledby=&quot;svgtitle1&quot;&gt; &lt;title id=&quot;svgtitle1&quot;&gt;Settings&lt;/title&gt; [other svg code] &lt;/svg&gt;</code></p>
+</li>
+<li>
+<p><strong>Logos:</strong><br>
+Logo images with text are exempt from some of the accessibility requirements. For instance, there is no minimum contrast requirement.</p>
+</li>
+</ul>
+
+  </main>
+  <footer>
+    <div class="page-width">
+      <h2><a href="https://w3.org/WAI/">
+        W3C Web Accessibility Initiative (WAI)
+      </a></h2>
+    </div>
+  </footer>
+</body>
+</html>

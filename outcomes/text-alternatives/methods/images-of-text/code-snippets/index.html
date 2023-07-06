@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <!-- Cheat in GitHub -->
+  <link rel="stylesheet" href="/wcag3-docs-wireframes/assets/main.css">
+</head>
+<body><div class="top-header">
+  <header class="page-width">
+    <div>
+      <div class="wcag3">WCAG 3.0</div>
+      <div class="title">Text alternatives Methods & How To's</div>
+    </div>
+
+    <div class="branding">
+      <a href="/wcag3-docs-wireframes/WAI/">
+  <img alt="W3C" src="/wcag3-docs-wireframes/assets/images/w3c.svg" width="92" height="44">
+  <img alt="Web Accessibility Initiative" src="/wcag3-docs-wireframes/assets/images/wai.svg">
+</a>
+
+    </div>
+  </header>
+
+  
+  <nav aria-label="WCAG 3 How-to Navigation"><div class="page-width nav-list">
+    
+    <ul>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/">Get Started</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/user-needs">User Needs</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/activities/plan">Activities</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/examples">Examples</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/resources">Resources</a>
+</li>
+      <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods">Methods</a>
+</li>
+    </ul>
+  </div></nav>
+  
+</div>
+<div class="sub-header">
+  <div class="page-width">
+    <ul class="breadcrumb">
+      <li><a href="https://w3c.github.io/silver/guidelines">WCAG 3.0</a></li>
+        <li><a href="/wcag3-docs-wireframes/outcomes/text-alternatives/">Text alternatives Methods & How To's</a></li>
+          <li><a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods">Methods</a></li>
+          
+            <li><a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/">Images of Text</a></li>
+            <li>Code Snippets</li>
+          
+    </ul>
+    
+    <h1 class="subtitle">
+      
+        Method - Images of Text
+      
+    </h1>
+    <nav aria-label="Methods navigation" class="nav-list">
+      <ul>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/">Introduction</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/code-snippets/">Code Snippets</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/test/">Test</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/background/">Background</a>
+</li>
+        <li>
+
+  <a href="/wcag3-docs-wireframes/outcomes/text-alternatives/methods/images-of-text/definitions/">Technical Definitions</a>
+</li>
+      </ul>
+    </nav>
+    
+  </div>
+</div>
+
+  <main>
+    
+    <h2>Code Snippets</h2>
+    
+    <h3>Passed</h3>
+<h4>Passed Example 1</h4>
+<p>This image resource referenced by the <code>img</code> element does not contain text.</p>
+<pre><code class="language-html">&lt;img src=&quot;/test-assets/shared/fireworks.jpg&quot; alt=&quot;fireworks going off behind the Eiffel tower at night&quot; /&gt;
+</code></pre>
+<h4>Passed Example 2</h4>
+<p>This image resource referenced by the <code>input</code> element does not contain text.</p>
+<pre><code class="language-html">&lt;input type=&quot;image&quot; src=&quot;/test-assets/shared/file.svg&quot; alt=&quot;New file&quot; /&gt;
+</code></pre>
+<h3>Failed</h3>
+<h4>Failed Example 1</h4>
+<p>This image resource referenced by the <code>img</code> element contains text for which the particular presentation is not essential.</p>
+<pre><code class="language-html">&lt;img
+	src=&quot;/test-assets/0va7u6/textimage.jpg&quot;
+	alt=&quot;The Accessibility Conformance Testing (ACT) Rules Format 1.0 defines a format for writing accessibility test rules.&quot;
+/&gt;
+</code></pre>
+<h4>Failed Example 2</h4>
+<p>This image resource referenced by the <code>input</code> element in the <a href="https://html.spec.whatwg.org/multipage/input.html#image-button-state-(type=image)">Image Button</a> contains text for which the particular presentation is not essential.</p>
+<pre><code class="language-html">&lt;input type=&quot;image&quot; src=&quot;/test-assets/0va7u6/button.jpg&quot; alt=&quot;Press me&quot; /&gt;
+</code></pre>
+<h3>Inapplicable</h3>
+<h4>Inapplicable Example 1</h4>
+<p>The resource referenced by the <code>object</code> element does not have <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/0va7u6/proposed/#visible" title="Definition of visible">visible pixels</a>.</p>
+<pre><code class="language-html">&lt;object date=&quot;/test-assets/0va7u6/textimage.jpg&quot; style=&quot;display: none&quot;&gt;&lt;/object&gt;
+</code></pre>
+<h4>Inapplicable Example 2</h4>
+<p>This <code>svg</code> element does not have <code>image</code> element descendants.</p>
+<pre><code class="language-html">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+	&lt;text x=&quot;20&quot; y=&quot;35&quot;&gt;My&lt;/text&gt;
+	&lt;text x=&quot;45&quot; y=&quot;35&quot;&gt;cat&lt;/text&gt;
+	&lt;text x=&quot;55&quot; y=&quot;55&quot;&gt;is&lt;/text&gt;
+	&lt;text x=&quot;70&quot; y=&quot;55&quot;&gt;Grumpy!&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+
+  </main>
+  <footer>
+    <div class="page-width">
+      <h2><a href="https://w3.org/WAI/">
+        W3C Web Accessibility Initiative (WAI)
+      </a></h2>
+    </div>
+  </footer>
+</body>
+</html>

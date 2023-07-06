@@ -1,10 +1,53 @@
 @import 'top-header.css';
 @import 'sub-header.css';
+@import 'footer.css';
+
+:root {
+  --w3c-classic: #005A9C;
+  --w3c-blue: #003366;
+  --wai-green: #005A6A;
+  --off-black: #1d1d1d;
+  --dk-grey: #3b3b3b;
+  --faded-red: #c0272d;
+  --red-subtle: #f1d0e1;
+  --light-blue: #196cac;
+  --dk-blue: #091832;
+  --gold: rgb(238, 208, 9);
+  --gold-light: rgba(238, 208, 9, .35);
+  --ocean: #00818d;
+  --cloudy: #bccbd3;
+  --cloudy-subtle: #d0e1f1;
+  --grey: #686868;
+  --line-grey: #ddd;
+  --trans-line-grey: rgba(221, 221, 221, 0.32);
+  --off-white: #f2f2f2;
+  --body-bg: #FAFAFC;
+  --lt-off-white: #fafafa;
+  --pure-white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.92);;
+  --visited-link: #660066;
+  --footer-grey: #efefef;
+}
 
 body {
   margin: 0;
-  background: #eee;
+  background: var(--body-bg);
   font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  color: var(--w3c-blue);
+}
+main > a:visited {
+  color: var(--visited-link);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--wai-green);
+}
+
+li::marker {
+  color: var(--faded-red);
 }
 
 .page-width, main {
@@ -18,7 +61,6 @@ body {
   padding: 0;
   text-align: center;
   font-size: 1.2em;
-  text-transform: uppercase;
 }
 
 .nav-list li {
@@ -38,10 +80,6 @@ body {
   margin-bottom: 0.5em;
 }
 
-a {
-  color: #036;
-}
-
 main li {
   margin-bottom: .5em;
 }
@@ -50,26 +88,36 @@ main p {
 }
 
 .card {
-  background: #CCC;
-  padding: 1em;
+  background: var(--off-white);
+  border: solid 1px var(--line-grey);
+  padding: 1.5em 1em 1em;
   margin: 2em;
 }
+.card > :first-child {
+  margin: 0;
+}
 
-.card a {
-  float: right;
-  margin: -3em 2em 0 0;
+.flex { display: flex; }
+.flex > :first-child { flex-grow: 1; }
+
+.card-button {
+  display: inline-block;
+  margin: 0 1em;
+  padding: .5em 2em;
   text-decoration: none;
   background: #111;
   color: #EEE;
-  padding: .5em 2em;
+  white-space: nowrap;
 }
 
 .method-card {
-  background: #ccc;
+  background: var(--off-white);
+  border: solid 1px var(--line-grey);
   width: 30em;
   margin: 2em auto;
   padding: 1.5em 5em;
 }
+
 .method-card dt, .method-card dd {
   display: inline-block;
   margin: 0;
@@ -78,10 +126,4 @@ main p {
 .method-card dt {
   font-size: 1.5em;
   padding: .5em;
-}
-
-footer {
-  margin-top: 4em;
-  min-height: 10em;
-  background: #333;
 }
