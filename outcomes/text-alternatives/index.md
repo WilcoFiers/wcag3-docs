@@ -2,6 +2,10 @@
 title: Get Started
 ---
 
+<div class="normative">
+  <p>{{ outcome.description }}</p>
+</div>
+
 ## Summary
 
 The purpose of this guideline is to ensure that all non-text content is also available in text. Text refers to electronic text, not an image of text. Electronic text has the unique advantage that it is presentation neutral.
