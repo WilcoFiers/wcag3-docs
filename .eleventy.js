@@ -3,8 +3,9 @@ const listOutcomes = require('./build/list-outcomes');
 
 module.exports = function(eleventyConfig) {
   // Ignore a couple things
-  eleventyConfig.ignores.add('readme.md');
+  eleventyConfig.ignores.add('**/readme.md');
   eleventyConfig.ignores.add('build/**');
+  eleventyConfig.ignores.add('**/_template/**');
 
   // Global data
   eleventyConfig.addGlobalData("layout", "layout.html");
