@@ -29,6 +29,10 @@
   --footer-grey: #efefef;
 }
 
+*:focus {
+  outline: solid 2px currentColor;
+}
+
 body {
   margin: 0;
   background: var(--body-bg);
