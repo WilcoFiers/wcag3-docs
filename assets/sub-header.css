@@ -31,3 +31,12 @@
   padding: 0;
   text-align: center;
 }
+.sub-header nav a {
+  border: solid 1px transparent;
+  margin-bottom: -1px; 
+}
+.sub-header [aria-current="page"] {
+  background: var(--body-bg);
+  border-color: var(--line-grey);
+  border-bottom-color: var(--body-bg);
+}
