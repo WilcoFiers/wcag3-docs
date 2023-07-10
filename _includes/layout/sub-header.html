@@ -6,12 +6,12 @@
         <li><a href="/outcomes/{{ outcome.slug }}/">{{ outcome.title }} Methods & How To's</a></li>
         {%- if type == "method" %}
           <li><a href="/outcomes/{{ outcome.slug }}/methods">Methods</a></li>
-          {% if subtitle == 'Introduction' %}
+          {%- if subtitle == 'Introduction' %}
             <li>{{ method.title }}</li>
-          {% else %}
+          {%- else %}
             <li><a href="/outcomes/{{ outcome.slug }}/methods/{{method.slug}}/">{{ method.title }}</a></li>
             <li>{{ subtitle }}</li>
-          {% endif %}
+          {%- endif %}
         {%- elsif type == "activity" %}
           <li><a href="/outcomes/{{ outcome.slug }}/activities/plan">Activities</a></li>
           <li>{{ subtitle }}</li>
@@ -24,11 +24,11 @@
     </ul>
     
     <h1 class="subtitle">
-      {% if type == 'method' %}
+      {%- if type == 'method' %}
         Method - {{ method.title }}
-      {% else %}
+      {%- else %}
         {{ title }}
-      {% endif %}
+      {%- endif %}
     </h1>
     
     {%- if type == "method" %}
@@ -46,7 +46,7 @@
         <li>{% include 'link.html', text: 'Technical Definitions', href: '/definitions/', base: baseUrl %}</li>
       </ul>
     </nav>
-    {% elsif type == 'activity' %}
+    {%- elsif type == 'activity' %}
     {%- assign baseUrl = '/outcomes/' | append: outcome.slug | append: '/activities' %}
     <nav aria-label="Activity navigation" class="nav-list">
       <ul>
@@ -57,6 +57,6 @@
         <li>{% include 'link.html', text: 'Test',    href: '/test/',    base: baseUrl %}</li>
       </ul>
     </nav>
-    {% endif %}
+    {%- endif %}
   </div>
 </div>

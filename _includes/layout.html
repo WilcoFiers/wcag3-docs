@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ title }}</title>
+  {%- include "layout/page-title.html" %}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <!-- Cheat in GitHub -->
   <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
-  {%- include "top-header.html" %}
+  {% include "layout/top-header.html" %}
   {%- if outcome.slug %}
-  {%-   include "sub-header.html" %}
+  {%-   include "layout/sub-header.html" %}
   {%- endif %}
-  <main>
-    {% if subtitle %}
+  <main id="main" tabindex="-1">
+    {%- if subtitle %}
     <h2>{{ subtitle }}</h2>
-    {% endif %}
+    {%- endif %}
     {{ content }}
   </main>
   <footer>

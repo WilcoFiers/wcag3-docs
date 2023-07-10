@@ -1,20 +1,20 @@
 <div class="top-header">
+  <nav class="page-width" aria-label="Skip link">
+    <a href="#main" class="skip-link">Skip to content</a>
+  </nav>
   <header class="page-width">
     <div>
       <div class="wcag3">WCAG 3.0</div>
-      {%- if outcome.title %}
-      <div class="title">{{ outcome.title}} Methods & How To's</div>
-      {%- endif %}
+      <div class="title">{{ outcome.title }} Methods & How To's</div>
     </div>
-
     <div class="branding">
-      {% include 'wai-logo.html' %}
+      {% include 'layout/wai-logo.html' %}
     </div>
   </header>
 
-  {% if outcome.slug %}
+  {%- if outcome.slug %}
   <nav aria-label="WCAG 3 How-to Navigation"><div class="page-width nav-list">
-    {% assign base = '/outcomes/' | append: outcome.slug %}
+    {%- assign base = '/outcomes/' | append: outcome.slug %}
     <ul>
       <li>{% include 'link.html', href: '/', base: base, text: 'Get Started' %}</li>
       <li>{% include 'link.html', href: '/user-needs', base: base, text: 'User Needs' %}</li>
@@ -24,5 +24,5 @@
       <li>{% include 'link.html', href: '/methods', base: base, text: 'Methods' %}</li>
     </ul>
   </div></nav>
-  {% endif %}
+  {%- endif %}
 </div>

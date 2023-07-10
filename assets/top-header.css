@@ -32,3 +32,16 @@
 .top-header nav {
   background-color: var(--w3c-blue);
 }
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  top: 0;
+  overflow: visible;
+  background-color: var(--w3c-blue);
+  padding: .75em 2em;
+  color: #fff;
+  z-index: 1000;
+}
