@@ -29,7 +29,7 @@
   --footer-grey: #efefef;
 }
 
-*:focus {
+*:focus-visible {
   outline: solid 2px currentColor;
 }
 
@@ -146,4 +146,11 @@ main p {
 .method-card dt {
   font-size: 1.5em;
   padding: .5em;
+}
+
+.normative {
+  border: solid 1px var(--cloudy-subtle);
+  margin-top: 1em;
+  padding: .5em 1em;
+  border-left-width: 1em;
 }
