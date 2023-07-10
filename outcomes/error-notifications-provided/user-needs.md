@@ -2,6 +2,9 @@
 title: User Needs
 ---
 
+<div class="normative">
+  <p>{{ outcome.description }}</p>
+</div>
 
 ## Barriers Encountered
 

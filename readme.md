@@ -1,6 +1,22 @@
 # WCAG 3 docs wire frames
 
+## Installation
 
+**Prerequisites**: This project requires [NodeJS](https://nodejs.org/)
+
+From the repository root, run the following command to install all necessary dependencies:
+
+```sh
+npm ci
+```
+
+## Local development
+
+To run this project locally, use the following command in the repository's root directory. This will start a server on `http://localhost:8080/`. The server has hot-reload enabled so changes to files will be reflected in the browser immediately. 
+
+```sh
+npm run serve
+```
 
 ## Creating a new outcome
 
@@ -14,4 +30,10 @@
 
 ## Create a new method
 
-1. ...
+1. Copy the method template from `outcome/_template/methods/_template` to the `methods` directory of the outcome you are creating a method for
+
+2. Give the copied directory an appropriate name
+
+3. Rename `_template.json` to match the directory name, and update its content. Give the method a `title` (1 - 4 words) and a description (2 - 4 sentences). The `slug` must be the directory name. Use `index` to sort methods.
+
+4. Fill out the `.md` files in your new directory
