@@ -1,14 +1,5 @@
 ---
-subtitle: Test
+layout: layout/test-activity.md
 ---
 
-{%- for method in methods %}
-  {%- assign href = '/outcomes/' | append: outcome.slug 
-    | append: '/methods/' | append: method.slug | append: '/test/' %}
-  {%-
-    include 'card.html',
-    title: method.title,
-    content: method.description,
-    href: href
-  %}
-{% endfor %}
+<!-- Leave this empty -->

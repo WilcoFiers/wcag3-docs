@@ -26,8 +26,10 @@
     <h1 class="subtitle">
       {%- if type == 'method' %}
         Method - {{ method.title }}
-      {%- else %}
+      {%- elsif title %}
         {{ title }}
+      {%- elsif breadcrumb == 'Methods' %}
+        Methods for {{ outcome.title }}
       {%- endif %}
     </h1>
     

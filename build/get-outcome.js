@@ -7,6 +7,9 @@ module.exports = function getOutcome(dirName) {
   const methods = fs.readdirSync(methodDir)
     .filter(file => fs.statSync(path.join(methodDir, file)).isDirectory())
     .map(subDir => {
+      if (subDir.startsWith('_')) {
+        return null
+      }
       try {
         const fileStr = fs.readFileSync(path.join(methodDir, subDir, subDir + '.json'), 'utf8')
         const json = JSON.parse(fileStr)
