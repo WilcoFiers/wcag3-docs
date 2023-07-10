@@ -1,5 +1,0 @@
----
-subtitle: Introduction
----
-
-Welcome

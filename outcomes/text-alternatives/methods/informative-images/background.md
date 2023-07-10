@@ -1,5 +1,0 @@
----
-subtitle: Background
----
-
-The background...
