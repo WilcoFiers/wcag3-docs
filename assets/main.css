@@ -89,7 +89,7 @@ li::marker {
   margin: 0 min(1em, 4vw);
   width: 100%;
   text-align: center;
-  outline-offset: -2px;
+  outline-offset: -3px;
   outline-width: 2px;
   outline-color: currentColor;
 }
