@@ -1,6 +1,6 @@
-{% capture current %}{{ page.url | replace: ".html", "" }}{% endcapture %}
-{% if href == current %}
-  <a class="current" href="{{ href | prepend: base }}">{{ text }}</a>
-{% else %}
-  <a href="{{ href | prepend: base }}">{{ text }}</a>
-{% endif %}
+{%- assign url = href | prepend: base %}
+{%- if url == page.url %}
+  <a aria-current="page" href="{{ url }}">{{ text }}</a>
+{%- else %}
+  <a href="{{ url }}">{{ text }}</a>
+{%- endif %}

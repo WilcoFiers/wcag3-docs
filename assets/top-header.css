@@ -35,6 +35,11 @@
 .top-header nav {
   background-color: var(--w3c-blue);
 }
+.top-header [aria-current="page"] {
+  background-color: var(--off-white);
+  color: var(--w3c-blue);;
+}
+
 .skip-link {
   position: absolute;
   top: -1000px;
